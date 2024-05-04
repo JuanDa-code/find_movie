@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { MovieCard } from './Movie'
-import { Bar } from './navbar/nav'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -11,7 +10,6 @@ const MainApp = () => {
 
   return (
     <React.Fragment>
-      <Bar setSearchTerm={ setSearchTerm } />
       <MovieCard searchTerm={ searchTerm } />
     </React.Fragment>
   )
