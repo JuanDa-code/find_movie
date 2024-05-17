@@ -1,18 +1,21 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import { MovieCard } from './Movie'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './index.scss';
+import { MovieCardComponent } from './Movie';
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const MainApp = () => {
-  const [ searchTerm, setSearchTerm ] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
-    <React.Fragment>
-      <MovieCard searchTerm={ searchTerm } />
-    </React.Fragment>
-  )
-}
+    <Router>
+      <React.Fragment>
+        <MovieCardComponent searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      </React.Fragment>
+    </Router>
+  );
+};
 
 root.render(<MainApp />);

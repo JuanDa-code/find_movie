@@ -1,0 +1,31 @@
+@import './variables';
+
+.movie-card {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: opacity 0.3s;
+
+  .card-img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .card-title, .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-title {
+    white-space: nowrap;
+    max-height: 50px;
+  }
+
+  .card-text {
+    max-height: 100px;
+  }
+
+  .btn {
+    align-self: flex-end;
+  }
+}

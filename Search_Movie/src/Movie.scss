@@ -1,0 +1,94 @@
+@import './variables';
+
+.background {
+  background-image: $bg-image;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: $primary-color;
+  .navbar-brand {
+    font-size: 30px;
+    img {
+      width: 100px;
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+  .form-inline {
+    .form-control {
+      margin-right: 10px;
+    }
+    .btn {
+      margin-top: 5px;
+    }
+  }
+}
+
+.container {
+  padding-top: $base-padding;
+  padding-bottom: $base-padding;
+
+  .filter-buttons {
+    margin-bottom: 20px;
+    color: white;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+
+  .movie-card {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: opacity 0.3s;
+
+    .card-img {
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .card-title, .card-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-title {
+      white-space: nowrap;
+      max-height: 50px;
+    }
+
+    .card-text {
+      max-height: 100px;
+    }
+
+    .btn {
+      align-self: flex-end;
+    }
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+
+  .btn {
+    margin-right: 5px;
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
