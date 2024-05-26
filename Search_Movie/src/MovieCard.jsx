@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Col } from 'react-bootstrap';
-import { Link } from "react-router-dom"; // Importar Link
+import { Link } from "react-router-dom";
 import './MovieCard.scss';
 
 export function MovieCard({ movie }) {

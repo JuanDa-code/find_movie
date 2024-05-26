@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './index.scss';
 import { MovieCardComponent } from './Movie';
+import { Contact } from './Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -12,7 +13,10 @@ const MainApp = () => {
   return (
     <Router>
       <React.Fragment>
-        <MovieCardComponent searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <Routes>
+          <Route path="/" element={<MovieCardComponent searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </React.Fragment>
     </Router>
   );

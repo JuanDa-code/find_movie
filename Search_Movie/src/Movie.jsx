@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Button, Container, Row, Col, Navbar, Form, FormControl } from 'react-bootstrap';
+import { Button, Container, Row, Navbar, Form, FormControl, Nav } from 'react-bootstrap';
 import { MovieCard } from './MovieCard';
 import './Movie.scss';
 
@@ -34,7 +34,6 @@ export function MovieCardComponent({ searchTerm, setSearchTerm }) {
   }, [filter, currentPage, searchTerm]);
 
   const handleFilterChange = (newFilter) => {
-    setMovies([]);
     setFilter(newFilter);
     setCurrentPage(1);
   };
@@ -58,6 +57,10 @@ export function MovieCardComponent({ searchTerm, setSearchTerm }) {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/contact">Contáctanos</Nav.Link>
+          </Nav>
           <Form inline="true" onSubmit={handleSearch} className="mx-auto form-inline">
             <FormControl type="text" id="search" placeholder="Search Movie" className="mr-sm-2 form-control" onChange={(e) => setSearchTerm(e.target.value)} />
             <Button variant="outline-success" onClick={handleSearch}>Search</Button>

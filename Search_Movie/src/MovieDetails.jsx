@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 export function MovieDetail({ movieId }) {
   const [movie, setMovie] = useState(null);
@@ -41,7 +42,9 @@ export function MovieDetail({ movieId }) {
               </Col>
             ))}
           </Row>
-          <Button href="/">Back to Search</Button>
+          <Link to="/">
+            <Button variant="success">Back to Search</Button>
+          </Link>
         </div>
       )}
     </Container>
